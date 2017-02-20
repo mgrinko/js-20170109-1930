@@ -14,7 +14,7 @@ body {
   float: left;
 }
 
-.phones {
+.phones__list {
   list-style: none;
 }
 
@@ -26,7 +26,7 @@ body {
   width: 100px;
 }
 
-.phones li {
+.phones__list li {
   clear: both;
   height: 115px;
   padding-top: 15px;

@@ -12,35 +12,46 @@
 </head>
 <body>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-2">
-          <!--Sidebar content-->
+<div class="container-fluid">
+  <div class="row">
 
-          <p>
-            Search:
-            <input>
-          </p>
+    <div class="col-md-2">
+      <!--Sidebar content-->
 
-          <p>
-            Sort by:
-            <select>
-              <option value="name">Alphabetical</option>
-              <option value="age">Newest</option>
-            </select>
-          </p>
+      <p>
+        Search:
+        <input>
+      </p>
 
-        </div>
+      <p>
+        Sort by:
+        <select>
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </p>
 
-
-        <div class="col-md-10">
-          <!--Body content-->
-
-          <div data-component="phoneCatalogue"></div>
-
-        </div>
+      <div>
+        <h3>Shopping cart</h3>
+        <ul class="selected-phones">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
       </div>
+
+
     </div>
+
+
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <div data-component="phoneCatalogue"></div>
+
+    </div>
+  </div>
+</div>
 
 
 </body>

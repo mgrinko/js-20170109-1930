@@ -4,7 +4,6 @@ body {
   padding-top: 20px;
 }
 
-
 .phone-images {
   background-color: white;
   width: 450px;
@@ -14,7 +13,7 @@ body {
   float: left;
 }
 
-.phones__list {
+.phones {
   list-style: none;
 }
 
@@ -26,7 +25,7 @@ body {
   width: 100px;
 }
 
-.phones__list li {
+.phones li {
   clear: both;
   height: 115px;
   padding-top: 15px;

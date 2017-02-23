@@ -1,6 +1,6 @@
 'use strict';
 
-const phones = [
+const phonesFromServer = [
   {
     "age": 0,
     "id": "motorola-xoom-with-wi-fi",
@@ -156,6 +156,8 @@ const phones = [
   }
 ];
 
+let phoneCatalogueTemplate = document.querySelector('#phone-catalogue-template').innerHTML;
+
 class PhoneCatalogue {
   constructor(options) {
     this._el = options.el;
@@ -166,26 +168,11 @@ class PhoneCatalogue {
   }
 
   _render() {
-    let html = `<ul class="phones">`;
+    this._templateFunction = _.template(phoneCatalogueTemplate);
 
-    phones.forEach((phone) => {
-      html += `
-        <li class="thumbnail" data-element="phoneItem" data-phone-id="${phone.id}">
-          <a href="#!/phones/${phone.id}" class="thumb" data-element="phoneItemLink">
-            <img alt="${phone.name}" src="${phone.imageUrl}">
-          </a>
-          
-          <a href="#!/phones/${phone.id}" data-element="phoneItemLink">${phone.name}</a>
-          
-          <p>${phone.snippet}</p>
-        </li>
-      `;
+    this._el.innerHTML = this._templateFunction({
+      phones: phonesFromServer
     });
-
-
-    html += '</ul>';
-
-    this._el.innerHTML = html;
 
   }
 

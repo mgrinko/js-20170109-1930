@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="app.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
   <script src="js/phone-catalogue.js" defer></script>
   <script src="js/phone-page.js" defer></script>
   <script src="js/app.js" defer></script>
@@ -53,6 +54,24 @@
   </div>
 </div>
 
+
+<script type="eqrwqer" id="phone-catalogue-template">  &lt;
+  <ul class="phones">
+    <% phones.forEach((phone) => { %>
+      <li class="thumbnail" data-element="phoneItem" data-phone-id="<%= phone.id %>">
+        <a href="#!/phones/<%= phone.id %>" class="thumb" data-element="phoneItemLink">
+          <img alt="<%-phone.name%>" src="<%= phone.imageUrl %>">
+        </a>
+
+        <a href="#!/phones/<%= phone.id %>" data-element="phoneItemLink">
+          <%-phone.name%>
+        </a>
+
+        <p><%-phone.snippet%></p>
+      </li>
+    <% }); %>
+  </ul>
+</script>
 
 </body>
 </html>

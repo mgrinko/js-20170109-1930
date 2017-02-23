@@ -160,6 +160,7 @@ const phonesFromServer = [
 class PhoneCatalogue {
   constructor(options) {
     this._el = options.el;
+    this._cart = options.cart;
 
     this._render();
 
@@ -186,6 +187,6 @@ class PhoneCatalogue {
 
     let selectedPhoneItem = phoneItemLink.closest('[data-element="phoneItem"]');
 
-    alert(selectedPhoneItem.dataset.phoneId);
+    this._cart.addItem(selectedPhoneItem.dataset.phoneId);
   }
 }

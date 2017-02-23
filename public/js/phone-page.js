@@ -10,7 +10,10 @@ class PhonePage {
 
     this._catalogue = new PhoneCatalogue({
       el: this._el.querySelector('[data-component="phoneCatalogue"]'),
-      cart: this._shoppingCart
+    });
+
+    this._catalogue.on('phoneSelected', (event) => {
+      this._shoppingCart.addItem(event.detail);
     });
   }
 }

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="app.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="js/shopping-cart.js" defer></script>
   <script src="js/phone-catalogue.js" defer></script>
   <script src="js/phone-page.js" defer></script>
   <script src="js/app.js" defer></script>
@@ -32,15 +33,7 @@
         </select>
       </p>
 
-      <div>
-        <h3>Shopping cart</h3>
-        <ul class="selected-phones">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul>
-      </div>
-
+      <div data-component="shopingCart"></div>
 
     </div>
 
@@ -55,7 +48,22 @@
 </div>
 
 
-<script type="eqrwqer" id="phone-catalogue-template">  &lt;
+<script type="eqrwqer" id="shopping-cart-template">
+  <h3>Shopping cart</h3>
+
+  <ul class="selected-phones">
+    <% orderItems.forEach(item => { %>
+      <li><%- item %></li>
+    <% }); %>
+  </ul>
+
+  <% if (!orderItems.length) { %>
+    <p>No items yet!</p>
+  <% } %>
+
+</script>
+
+<script type="eqrwqer" id="phone-catalogue-template">
   <ul class="phones">
     <% phones.forEach((phone) => { %>
       <li class="thumbnail" data-element="phoneItem" data-phone-id="<%= phone.id %>">
@@ -72,6 +80,8 @@
     <% }); %>
   </ul>
 </script>
+
+
 
 </body>
 </html>

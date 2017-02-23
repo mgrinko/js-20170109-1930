@@ -156,7 +156,6 @@ const phonesFromServer = [
   }
 ];
 
-let phoneCatalogueTemplate = document.querySelector('#phone-catalogue-template').innerHTML;
 
 class PhoneCatalogue {
   constructor(options) {
@@ -168,7 +167,9 @@ class PhoneCatalogue {
   }
 
   _render() {
-    this._templateFunction = _.template(phoneCatalogueTemplate);
+    let template = document.querySelector('#phone-catalogue-template').innerHTML;
+
+    this._templateFunction = _.template(template);
 
     this._el.innerHTML = this._templateFunction({
       phones: phonesFromServer

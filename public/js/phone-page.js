@@ -17,7 +17,7 @@ class PhonePage {
     });
 
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data/phones/phones.json', true);
+    xhr.open('GET', '/data/phones/phones.json', true);
 
     xhr.onload = () => {
       let phones = JSON.parse(xhr.responseText);

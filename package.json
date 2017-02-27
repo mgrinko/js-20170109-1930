@@ -1,0 +1,22 @@
+{
+  "name": "js-20170109-1930",
+  "version": "1.0.0",
+  "description": "Phone catalogue",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgrinko/js-20170109-1930.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgrinko/js-20170109-1930/issues"
+  },
+  "homepage": "https://github.com/mgrinko/js-20170109-1930#readme",
+  "devDependencies": {
+    "node-static": "^0.7.9"
+  }
+}
